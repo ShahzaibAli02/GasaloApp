@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "360263611851",
+    "project_id": "gasaloapp",
+    "storage_bucket": "gasaloapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:360263611851:android:655919740341cfcdd1324e",
+        "android_client_info": {
+          "package_name": "com.app.gasaloapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "360263611851-86iimsaleus9od2mqgrhusu32l5t30om.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBy_o4IbiPZpuJKrVi6o6cycJ_cuLhG-FQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "360263611851-86iimsaleus9od2mqgrhusu32l5t30om.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

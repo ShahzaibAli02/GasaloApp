@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/back_color"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <include layout="@layout/lyt_header" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/qr_scan_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="30dp"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/white"
+            android:backgroundTint="@color/back_color"
+            android:text="@string/identificativo_qr_code"
+            />
+
+        <TextView
+            android:id="@+id/txtQr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:text="QR : "
+            android:textColor="@color/white"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nozzle_icon"
+            android:layout_margin="@dimen/_20sdp"
+            android:visibility="gone"
+            />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:strokeColor="@color/black_1"
+            app:strokeWidth="@dimen/_4sdp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tank"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/black_1"
+                    android:textSize="20dp"
+                    />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/_40sdp"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:hint="Insert Total Litres"
+                    android:textColorHint="#D5D3D3"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/nunitosans_extrabold"
+                    android:background="@color/black_1"
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Refueled"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/black_1"
+                    android:textSize="20dp"
+                    />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTotalLiters"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/_40sdp"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:fontFamily="@font/nunitosans_extrabold"
+                    android:background="@color/black_1"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Progressive"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/black_1"
+                    android:textSize="20dp"
+                    />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etLiters"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/_40sdp"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:fontFamily="@font/nunitosans_extrabold"
+                    android:background="@color/black_1"
+                    />
+
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubMit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:text="Submit"
+            android:textSize="20sp"
+            android:fontFamily="@font/nunitonans_semibold"
+            android:textAllCaps="false"
+            android:textColor="@color/black_1"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/back_button_color"
+            app:cornerRadius="10dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+        <include layout="@layout/lyt_fotter" />
+
+    </LinearLayout>
+</ScrollView>

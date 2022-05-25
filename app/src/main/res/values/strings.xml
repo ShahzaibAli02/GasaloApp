@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GasaloApp</string>
+    <string name="scan">Scan</string>
+    <string name="sign_in">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="identificativo_qr_code">Identificativo QR Code</string>
+    <string name="fotografare_quadro_prima_del_rifornimento">Fotografare quadro prima del rifornimento</string>
+
+</resources>
