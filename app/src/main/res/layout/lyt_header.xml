@@ -22,12 +22,23 @@
         android:layout_marginTop="@dimen/_20sdp"
         app:civ_border_width="4dp"
         app:civ_border_color="@color/black"/>
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_170sdp"
-        android:src="@drawable/pompa"
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_20sdp"
-        />
+        android:layout_gravity="center"
+        app:cardCornerRadius="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        >
+        <ImageView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:src="@drawable/logo"
+            android:scaleType="centerCrop"
+            />
+    </androidx.cardview.widget.CardView>
+
 
 
 

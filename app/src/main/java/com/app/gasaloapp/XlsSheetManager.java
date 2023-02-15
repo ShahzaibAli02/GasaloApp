@@ -21,6 +21,7 @@ import org.apache.poi.ss.usermodel.FillPatternType;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -93,6 +94,16 @@ public class XlsSheetManager extends ContextWrapper
 
         cell=rowA.createCell(++columnindex);
         cell.getCellStyle().setFont(font);
+        cell.setCellValue("Price");
+
+
+        cell=rowA.createCell(++columnindex);
+        cell.getCellStyle().setFont(font);
+        cell.setCellValue("Total Price");
+
+
+        cell=rowA.createCell(++columnindex);
+        cell.getCellStyle().setFont(font);
         cell.setCellValue("Note");
 
 
@@ -133,6 +144,22 @@ public class XlsSheetManager extends ContextWrapper
 
         cell=rowA.createCell(++columnindex);
         cell.setCellStyle(cellStyle);
+        cell.setCellValue(entry.price);
+
+        double totalLiteres=0.0;
+        double totalPrice=0.0;
+        if(notEmptyAndNull(entry.total_literes))
+            totalLiteres = Double.parseDouble(entry.total_literes);
+
+        totalPrice=totalLiteres*entry.price;
+
+        cell=rowA.createCell(++columnindex);
+        cell.setCellStyle(cellStyle);
+        cell.setCellValue(totalPrice);
+
+
+        cell=rowA.createCell(++columnindex);
+        cell.setCellStyle(cellStyle);
         cell.setCellValue(entry.note);
 
 
@@ -141,7 +168,10 @@ public class XlsSheetManager extends ContextWrapper
         cell.setCellStyle(cellStyle);
         cell.setCellValue(entry.image);
     }
-
+    boolean notEmptyAndNull(String str)
+    {
+        return str!=null && !str.isEmpty();
+    }
     public  String save()
     {
 

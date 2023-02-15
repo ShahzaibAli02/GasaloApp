@@ -73,6 +73,28 @@
             android:padding="@dimen/_10sdp"
             />
         <TextView
+            android:id="@+id/txtPrice"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Price"
+            android:textColor="@color/white"
+            android:background="@color/back_color"
+            android:padding="@dimen/_10sdp"
+            />
+        <TextView
+            android:id="@+id/txtTotalPrice"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Total Price"
+            android:textColor="@color/white"
+            android:background="@color/back_color"
+            android:padding="@dimen/_10sdp"
+            />
+        <TextView
             android:id="@+id/txtNote"
             android:layout_marginStart="@dimen/_5sdp"
             android:layout_width="@dimen/_150sdp"

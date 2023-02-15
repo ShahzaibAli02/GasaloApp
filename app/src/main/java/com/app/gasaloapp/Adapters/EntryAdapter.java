@@ -19,6 +19,7 @@ import com.app.gasaloapp.databinding.ItemEntryBinding;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class EntryAdapter extends RecyclerView.Adapter<EntryAdapter.ViewHolder> {
     private List<Entry>listData;
@@ -47,6 +48,19 @@ public class EntryAdapter extends RecyclerView.Adapter<EntryAdapter.ViewHolder> 
         binding.txtTotalLiteres.setText(entry.now_refueling);
         binding.txtNote.setText(entry.note);
 
+        double totalLiteres=0.0;
+        double totalPrice=0.0;
+        if(notEmptyAndNull(entry.total_literes))
+            totalLiteres = Double.parseDouble(entry.total_literes);
+
+        totalPrice=totalLiteres*entry.price;
+        binding.txtPrice.setText(String.valueOf(entry.price));
+        binding.txtTotalPrice.setText(String.format(Locale.ENGLISH,"%.2f",totalPrice));
+
+    }
+    boolean notEmptyAndNull(String str)
+    {
+        return str!=null && !str.isEmpty();
     }
 
     @Override

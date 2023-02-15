@@ -97,16 +97,19 @@ public class Screen2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if(!Util.isEmpty( binding.etTank,binding.etLiters,binding.etTotalLiters) && QR!=null && !QR.isEmpty())
+                //TODO REMOVE
+                if(!Util.isEmpty( binding.etTank,binding.etLiters,binding.etTotalLiters) && QR!=null && !QR.isEmpty() || true)
                 {
 
                     updateLitres();
 
                     Entry entry=new Entry();
-                    entry.person_id=QR;
+                    entry.person_id="test";
+                   // entry.person_id=QR;
                     new SharedPref(Screen2.this).saveQrCode(QR);
                     entry.now_refueling=binding.etLiters.getText().toString();
                     entry.total_literes=binding.etTotalLiters.getText().toString();
+                    entry.price=binding.etPrice.getText().toString().isEmpty()?0.0:Double.parseDouble(binding.etPrice.getText().toString());
                     startActivity(new Intent(Screen2.this,Screen3.class).putExtra(Screen3.EXTRA_ENTRY_KEY,entry));
                 }
 
